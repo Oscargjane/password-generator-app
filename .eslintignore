@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vscode
+.prettierrc.cjs
+.eslintrc.cjs
+.husky
+package-lock.json
+
