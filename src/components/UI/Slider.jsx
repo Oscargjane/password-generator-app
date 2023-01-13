@@ -1,31 +1,33 @@
-import { useState } from 'react';
 import {
   StyledSliderContainer,
   StyledSliderHeader,
   StyledSlider,
 } from '../styles/Slider.styled';
 
-function Slider({ initial, max, id, label }) {
-  const [passwordLength, setPasswordLength] = useState(0);
-  const getPercentage = (currentLength, maxLength = max) =>
+function Slider({
+  initialValue,
+  maxValue,
+  currentLength,
+  label,
+  id,
+  onLengthChange,
+}) {
+  const getPercentage = (currentLength, maxLength = maxValue) =>
     (currentLength * 100) / maxLength;
-  const handlePasswordLengthChange = event =>
-    setPasswordLength(event.target.value);
 
   return (
     <StyledSliderContainer>
       <StyledSliderHeader htmlFor={id}>
         {label}
-        <span>{passwordLength}</span>
+        <span>{currentLength}</span>
       </StyledSliderHeader>
       <StyledSlider
         percentage={getPercentage}
-        defaultValue={passwordLength}
-        min={initial}
-        max={max}
+        defaultValue={currentLength}
+        min={initialValue}
+        max={maxValue}
         name={id}
-        id={id}
-        onChange={handlePasswordLengthChange}
+        onChange={onLengthChange}
       />
     </StyledSliderContainer>
   );

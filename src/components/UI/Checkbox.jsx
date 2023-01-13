@@ -3,11 +3,15 @@ import {
   StyledCheckbox,
 } from '../styles/Checkbox.styled';
 
-function Checkbox(props) {
+function Checkbox({ checkboxName, label, isChecked, onCheckedChange }) {
   return (
     <StyledCheckboxContent>
-      <StyledCheckbox />
-      {props.label}
+      <StyledCheckbox
+        name={checkboxName}
+        checked={isChecked}
+        onChange={onCheckedChange}
+      />
+      {label}
     </StyledCheckboxContent>
   );
 }
