@@ -20,7 +20,7 @@ export const StyledButton = styled.button`
     rgba(240, 206, 128, 1) 100%
   );
   cursor: pointer;
-  transition: all 500ms;
+  transition: all 300ms ease-in-out;
 
   & > svg {
     padding-left: 1rem;
@@ -41,5 +41,24 @@ export const StyledButton = styled.button`
 
   &:active > svg {
     transform: translateX(1rem);
+  }
+
+  &:disabled {
+    color: ${({ theme }) => theme.colors.gray_700};
+    background-color: rgba(234, 187, 78, 0.2);
+    background: linear-gradient(
+      90deg,
+      rgba(234, 187, 78, 0.2) 100%,
+      rgba(240, 206, 128, 0.2) 100%
+    );
+    cursor: not-allowed;
+
+    &:active > svg {
+      transform: translateX(0);
+    }
+
+    &:hover {
+      border: 2px solid transparent;
+    }
   }
 `;

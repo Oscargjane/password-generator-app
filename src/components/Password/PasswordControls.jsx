@@ -24,9 +24,10 @@ function PasswordControls({ onPasswordDataChange }) {
     isNumbersChecked: false,
     isSymbolsChecked: false,
   });
+  const hasCheckedTrue = Object.values(isChecked).includes(true);
 
   const handlePasswordLengthChange = event =>
-    setPasswordLength(event.target.value);
+    setPasswordLength(parseInt(event.target.value));
 
   const handlePasswordSettingsChange = event => {
     const currentCheckTarget = event.target.name;
@@ -83,6 +84,7 @@ function PasswordControls({ onPasswordDataChange }) {
     const passwordData = onPasswordDataChange({
       initialLength: 0,
       maxLength: 16,
+      currentLength: passwordLength,
       isChecked,
     });
 
@@ -127,7 +129,10 @@ function PasswordControls({ onPasswordDataChange }) {
           />
         </StyledCheckboxContainer>
         <PasswordStrengthRating onStrengthRatingChange={calcStrengthRating} />
-        <Button type="submit">
+        <Button
+          type="submit"
+          isDisabled={!hasCheckedTrue || passwordLength === 0 ? true : false}
+        >
           Generated
           <FontAwesomeIcon icon={faArrowRight} />
         </Button>
