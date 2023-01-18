@@ -23,6 +23,13 @@ const theme = {
     gray_800: '#262626',
     gray_900: '#171717',
   },
+
+  // Break Points
+  bp: {
+    large: '75em', // 1200px
+    medium: '56.25em', // 900px
+    small: '37.5em', // 600px
+  },
 };
 
 export default function Theme({ children }) {
