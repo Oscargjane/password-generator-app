@@ -6,7 +6,8 @@ const StyledPasswordGenerated = styled.div`
   justify-content: space-between;
   font-size: 2.4rem;
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.gray_400};
+  color: ${({ theme, isCopied }) =>
+    isCopied ? theme.colors.gray_100 : theme.colors.gray_400};
 
   & > svg {
     color: ${({ theme }) => theme.colors.primary_500};

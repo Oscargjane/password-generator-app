@@ -130,6 +130,7 @@ function PasswordControls({ onPasswordDataChange }) {
         </StyledCheckboxContainer>
         <PasswordStrengthRating onStrengthRatingChange={calcStrengthRating} />
         <Button
+          variant="submitBtn"
           type="submit"
           isDisabled={!hasCheckedTrue || passwordLength === 0 ? true : false}
         >
