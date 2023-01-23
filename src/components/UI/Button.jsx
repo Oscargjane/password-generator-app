@@ -1,8 +1,19 @@
 import { StyledButton } from '../styles/Button.styled';
 
-function Button({ type = 'button', isDisabled, children }) {
+function Button({
+  type = 'button',
+  variant,
+  isDisabled,
+  children,
+  onCopyToClipboard,
+}) {
   return (
-    <StyledButton type={type} disabled={isDisabled}>
+    <StyledButton
+      name={variant}
+      type={type}
+      disabled={isDisabled}
+      onClick={onCopyToClipboard}
+    >
       {children}
     </StyledButton>
   );
