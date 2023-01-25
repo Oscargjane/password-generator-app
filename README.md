@@ -1,7 +1,7 @@
 # Password Generator
 
-![Overview Project Image](src/assets/overview-image.png)
 A small random password generator application was created to get my hands dirty with a bit of React and practice fundamental front-end development skills.
+![Overview Project Image](src/assets/overview-image.png)
 
 ## Table of contents
 
@@ -16,8 +16,6 @@ A small random password generator application was created to get my hands dirty 
   - [Author](#author)
 
 ## Overview
-
----
 
 ### The Challenge
 
@@ -34,8 +32,6 @@ Users must be able to:
 Improve my fundamental front-end development skills, and test new tools and workflows.
 
 ## My process
-
----
 
 ### Built with
 
@@ -63,8 +59,6 @@ The key learnings of this project were:
 - Using watchers to trigger logic on specific data property updates
 
 ## Author
-
----
 
 - Twitter: [@oscargjane](https://twitter.com/oscargjane)
 - Linkedin: [Oscar Jané](https://www.linkedin.com/in/oscar-jane-frontend-developer/)
