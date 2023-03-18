@@ -1,6 +1,6 @@
 # Password Generator
 
-A small random password generator application was created to get my hands dirty with a bit of React and practice fundamental front-end development skills.
+Small random password generator application, created with the goal of practicing fundamental front-end development skills and getting my hands dirty with React.
 ![Overview Project Image](src/assets/overview-image.png)
 
 ## Table of contents
